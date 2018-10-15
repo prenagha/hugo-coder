@@ -18,7 +18,7 @@
     {{ end }}
 
     <div class="recent">
-      <a href="/posts/"><h3>Recent Blog Posts</h3></a>
+      <a href="/posts/"><h3 class="title">Recent Blog Posts</h3></a>
       <ul>
         {{ range first 5 (where .Pages "Section" "posts").ByDate.Reverse }}
         <li>

@@ -1,0 +1,15 @@
+
+{{ $related := .Site.RegularPages.Related . | first 10 }}
+{{ with $related }}
+<div class="related list">
+  <h3 class="title">See Also</h3>
+  <ul>
+    {{ range . }}
+      <li>
+        <span>{{ .Date.Format (.Site.Params.dateFormat | default "January 2, 2006" ) }}</span>
+        <a href="{{ .URL }}">{{ .Title }}</a>
+      </li>
+    {{ end }}
+  </ul>
+</div>
+{{ end }}
