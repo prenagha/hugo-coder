@@ -55,7 +55,13 @@
     {{ if .Site.Params.twitter }}
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@{{ .Site.Params.twitter }}">
-    <meta name="twitter:image" content="{{ .Site.Params.twitterImage }}">
+
+    {{ if .Params.twitterImage }}
+    <meta name="twitter:image" content="{{ .Site.BaseURL }}{{ .Params.twitterImage }}">
+    {{ else }}
+    <meta name="twitter:image" content="{{ .Site.BaseURL }}{{ .Site.Params.twitterImage }}">
+    {{ end }}
+
     <meta name="twitter:title" content="{{ .Title }} &ndash; {{ .Site.Title }}">
     <meta name="twitter:description" content="{{ .Summary }}">
     {{ end }}
