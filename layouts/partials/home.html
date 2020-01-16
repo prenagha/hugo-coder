@@ -23,7 +23,7 @@
         {{ range first 5 (where .Site.RegularPages "Section" "posts").ByDate.Reverse }}
         <li>
           <span>{{ .Date.Format (.Site.Params.dateFormat | default "Jan 2, 2006" ) }}</span>
-          <a href="{{ .URL }}">{{ .Title }}</a>
+          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
         </li>
         {{ end }}
       </ul>
