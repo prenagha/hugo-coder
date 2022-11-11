@@ -63,6 +63,10 @@
     <meta name="twitter:description" content="{{ .Summary }}">
     {{ end }}
 
+    {{ if .Site.Params.mastodonMe }}
+    <link id="mastodon-me-link" rel="me" href="{{ .Site.Params.mastodonMe }}">
+    {{ end }}
+
     {{ hugo.Generator }}
   </head>
 
