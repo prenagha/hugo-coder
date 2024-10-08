@@ -5,7 +5,6 @@ theme = "hugo-coder"
 
 languagecode = "en"
 
-paginate = 20
 canonifyurls = true
 
 pygmentsstyle = "b2"
@@ -13,6 +12,9 @@ pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
 
 disqusShortname = "yourdiscussshortname"
+
+[pagination]
+  pagerSize = 20
 
 [params]
     author = "John Doe"
